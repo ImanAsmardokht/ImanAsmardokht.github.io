@@ -1,79 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iman Asmardokht - Resume</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Iman Asmardokht – Academic CV</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{
+  --bg:#0b0d10;
+  --card:#12161b;
+  --ink:#e9edf3;
+  --muted:#aeb6c2;
+  --brand:#5bb1ff;
+  --accent:#7ee7a7;
+  --rule:#1c232b;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:linear-gradient(180deg,#0b0d10, #0d1116 40%, #0b0d10);
+  color:var(--ink);
+  font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,Apple Color Emoji,Segoe UI Emoji;
+  -webkit-font-smoothing:antialiased;
+  padding:32px 16px;
+}
+.wrapper{
+  max-width:980px;margin:0 auto;
+}
+.header{
+  background:radial-gradient(1200px 400px at 20% -10%, rgba(91,177,255,.12), transparent 60%),
+             radial-gradient(1000px 400px at 100% -20%, rgba(126,231,167,.10), transparent 60%),
+             var(--card);
+  border:1px solid var(--rule);
+  border-radius:24px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:16px;
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+}
+.name{
+  font-size:28px;font-weight:800;letter-spacing:.2px;
+}
+.role{color:var(--muted);font-size:15px;margin-top:4px}
+.tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.tag{
+  border:1px solid var(--rule);
+  background:#0e1318;
+  color:#cfe7ff;
+  padding:6px 10px;border-radius:999px;font-size:12px
+}
+.contact{
+  display:flex;flex-direction:column;gap:8px;
+  align-items:flex-end;justify-content:center
+}
+.contact a{color:var(--ink);text-decoration:none}
+.contact a:hover{color:var(--brand)}
+.grid{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap:22px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.h{
+  font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:#9fb2c7;margin:0 0 14px;
+}
+.item{margin-bottom:14px}
+.item:last-child{margin-bottom:0}
+.kv{display:flex;gap:8px;align-items:baseline}
+.k{width:120px;color:var(--muted);font-size:13px}
+.v{font-weight:600}
+.hr{height:1px;background:var(--rule);margin:14px 0}
+.edu .degree{font-weight:700}
+.edu .meta{color:var(--muted);font-size:14px;margin-top:4px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.badge{
+  background:#0e141a;border:1px solid var(--rule);border-radius:10px;
+  padding:6px 10px;font-size:12px;color:#d6e2f0
+}
+.list{margin:0;padding-left:18px}
+.list li{margin:6px 0}
+.two-col{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px
+}
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .contact{align-items:flex-start}
+  .two-col{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff;color:#000;padding:0}
+  .header,.card{box-shadow:none}
+  .tag,.badge{border-color:#ddd;background:#fafafa;color:#000}
+  :root{--rule:#ddd}
+}
+</style>
 </head>
 <body>
-    <div class="resume-container">
-        <header class="header">
-            <img src="photo.jpg" alt="Iman Asmardokht" class="profile-photo">
-            <div class="header-text">
-                <h1>Iman Asmardokht</h1>
-                <p>Photogrammetry & AI Researcher | Developer</p>
-                <div class="contact">
-                    <p>Email: <a href="mailto:iasmardokht@gmail.com">iasmardokht@gmail.com</a></p>
-                    <p>Phone: +98 936 202 3173</p>
-                    <p>LinkedIn: <a href="#">linkedin.com/in/iman-asmardokht</a></p>
-                    <p>Location: Tehran, Iran</p>
-                </div>
-            </div>
-        </header>
+  <div class="wrapper">
+    <section class="header">
+      <div>
+        <div class="name">Iman Asmardokht</div>
+        <div class="role">M.Sc. Photogrammetry • R&D • Computer Vision • UAV Navigation</div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">C#</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">UAV / MAVLink</span>
+          <span class="tag">Embedded (Jetson • Raspberry Pi)</span>
+          <span class="tag">GIS / Mapping</span>
+        </div>
+      </div>
+      <div class="contact">
+        <div><a href="mailto:iasmardokht@gmail.com">iasmardokht@gmail.com</a></div>
+        <div><a href="tel:+989362023173">+98 936 202 3173</a></div>
+        <div>Tehran, Iran</div>
+        <div>LinkedIn: Iman Asmardokht</div>
+      </div>
+    </section>
 
-        <section>
-            <h2>Education</h2>
-            <ul>
-                <li><strong>University of Tehran</strong> — M.Sc. in Photogrammetry (2023 – 2026)</li>
-                <li><strong>University of Tehran</strong> — B.Sc. in Surveying Engineering (2018 – 2023)</li>
+    <section class="grid" aria-label="content">
+      <aside class="card">
+        <h3 class="h">Profile</h3>
+        <div class="item">
+          R&D engineer and photogrammetry specialist with experience in computer vision, UAV autonomous navigation, and real‑time image processing. Comfortable across embedded platforms, mapping workflows, and full‑stack integration for mission planning and data products.
+        </div>
+        <div class="hr"></div>
+        <h3 class="h">Skills</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">CUDA</span>
+          <span class="badge">C#</span>
+          <span class="badge">HTML/CSS/JavaScript</span>
+          <span class="badge">Linux</span>
+          <span class="badge">Mission Planner</span>
+          <span class="badge">Agisoft Metashape</span>
+          <span class="badge">GeoServer</span>
+          <span class="badge">ArcGIS / QGIS</span>
+          <span class="badge">RTSP</span>
+          <span class="badge">Gimbal/Camera Control</span>
+        </div>
+        <div class="hr"></div>
+        <h3 class="h">Languages</h3>
+        <div class="item kv"><div class="k">Persian</div><div class="v">Native</div></div>
+        <div class="item kv"><div class="k">English</div><div class="v">Intermediate (improving)</div></div>
+      </aside>
+
+      <main class="card">
+        <h3 class="h">Education</h3>
+        <div class="item edu">
+          <div class="degree">M.Sc. in Photogrammetry</div>
+          <div class="meta">University of Tehran • 2023–2026 (expected)</div>
+        </div>
+        <div class="item edu">
+          <div class="degree">B.Sc. in Surveying Engineering</div>
+          <div class="meta">University of Tehran • 2018–2023</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h3 class="h">Thesis</h3>
+        <div class="item">
+          <strong>Road‑based and vision‑based navigation for UAVs:</strong> Terrain‑based navigation using aerial imagery.
+        </div>
+
+        <div class="hr"></div>
+
+        <h3 class="h">Research Experience & Projects</h3>
+        <ul class="list">
+          <li>Autonomous UAV navigation: vision‑based and road‑based methods; INS integration with EKF; Visual Teach & Repeat.</li>
+          <li>Real‑time image stabilization and online mosaicking for aerial imagery.</li>
+          <li>Computer vision applications: face recognition; vehicle speed estimation from video.</li>
+          <li>MAVLink integrations; gimbal and camera stream control; RTSP pipelines.</li>
+          <li>Embedded computing on NVIDIA Jetson and Raspberry Pi for onboard perception.</li>
+          <li>Celestial‑ and LTE‑based navigation experiments for redundancy.</li>
+          <li>Web/UI and networking components for ground control and data services.</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h3 class="h">Work Experience</h3>
+        <div class="two-col">
+          <div class="item">
+            <strong>R&D Engineer – AI Solutions</strong><br>
+            2020–Present
+            <ul class="list">
+              <li>Developed AI and image‑processing pipelines for UAV autonomy and mapping.</li>
+              <li>Implemented ML/CV modules for navigation, detection, and real‑time streaming.</li>
+              <li>Deployed solutions on Jetson and Raspberry Pi; integrated with Mission Planner.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Thesis</h2>
-            <p>Road-based and Vision-based Navigation for Drones (Terrain-based navigation with aerial imagery).</p>
-        </section>
-
-        <section>
-            <h2>Research & Projects</h2>
-            <ul>
-                <li>AI solutions: Image processing, machine learning, computer vision</li>
-                <li>UAV systems: Autopilot, navigation (Vision, Road, INS, LTE, Celestial, EKF)</li>
-                <li>Online mosaic, image stabilization, visual teach & repeat</li>
-                <li>Face recognition, car speed estimation from video</li>
-                <li>Integration with Raspberry Pi, Jetson, and embedded boards</li>
-                <li>RTSP streaming, gimbal and camera control</li>
-                <li>Web, UI, and network solutions</li>
+          </div>
+          <div class="item">
+            <strong>Surveying & Photogrammetry Engineer</strong><br>
+            2018–Present
+            <ul class="list">
+              <li>UAV‑based photogrammetric surveys; LiDAR/imagery to 3D products.</li>
+              <li>Leica Total Station and GPS workflows; spatial analysis in ArcGIS/QGIS.</li>
+              <li>Orthomosaics, DSM/DTM generation, and quality control in Metashape.</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Work Experience</h2>
-            <h3>R&D Engineer — AI & UAV Solutions</h3>
-            <p>Focused on AI-driven image processing, autonomous UAV navigation, and embedded systems development. Experienced with autopilot systems, geospatial data processing, and real-time computer vision applications.</p>
-
-            <h3>Surveying & Photogrammetry Engineer</h3>
-            <p>Hands-on experience in UAV-based photogrammetry, Leica Total Station, GPS surveying, and remote sensing for mapping and geospatial analysis.</p>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <div class="skills">
-                <div>
-                    <h4>Programming</h4>
-                    <p>Python, CUDA, C#, HTML, CSS, JavaScript</p>
-                </div>
-                <div>
-                    <h4>Software & Tools</h4>
-                    <p>Mission Planner, Agisoft Metashape, GeoServer, Linux, ArcGIS, QGIS</p>
-                </div>
-                <div>
-                    <h4>Languages</h4>
-                    <p>Persian (Native), English (Intermediate)</p>
-                </div>
-            </div>
-        </section>
-    </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </div>
 </body>
 </html>
