@@ -174,8 +174,44 @@ body{
         <div class="hr"></div>
 
         <h3 class="h">Research Experience & Projects</h3>
+
         <ul class="list">
-          <li>Autonomous UAV navigation: vision‑based and road‑based methods; INS integration with EKF; Visual Teach & Repeat.</li>
+          <li>
+            <span style="font-weight: bold; font-size: 18px;">Autonomous UAV Navigation:</span>
+            <ul>
+              <li><b>Vision Base Navigation:</b>
+                <ul>
+                  <li>Terrain based navigation using aerial imagery</li>
+                  <li>Using Google Satellite imagery for Library</li>
+                  <li>By finding similarities between the live stream image and Google satellite images or georeferenced orthomosaics of the area in which the UAV is flying, it is positioned and its automatic navigation is performed.</li>
+                </ul>
+              </li>
+              <li><b>Road Base Navigation:</b>
+                <ul>
+                  <li>Road Detection and Tracking</li>
+                  <li>Road Following for Navigation</li>
+                  <li>By using road detection and tracking, the road is kept  in the center of the live stream by applying corrections to the UAV, and this keeps the UAV always moving on the road and automatic navigation is performed.</li>
+                </ul>
+              </li>
+              <li><b>Visual Teach & Repeat:</b>
+                <ul>
+                  <li>Teaching phase: Using GPS and INS, features are identified along the route, and their coordinates are given and stored.</li>
+                  <li>Repeating phase: On the return route, the bird's position is determined and navigation is performed by finding similarities between the stored features that were given coordinates and the live camera stream.</li>
+                  <li>A route is taken using GPS/INS and as soon as GPS is lost, it automatically returns from the route taken.</li>
+                </ul>
+              </li>
+              <li><b>LTE Navigation:</b>
+                <ul>
+                  <li>Receiving signals from the contact towers, the signal includes an ID specific to each tower, signal strength, and tower type, which allows the module's distance from each tower to be calculated, and once the exact location of the towers is known, the UAV is positioned and automatic navigation is performed.</li>
+                </ul>
+              </li>
+              <li><b>INS Navigation and Manual Correction:</b>
+                <ul>
+                  <li>If the UAV does not have any positioning module, using its internal elements such as air speed, IMU, Barometer, Compass, which are EKF inputs, the UAV can have an estimate of its position and use it to navigate, but in this method, due to the presence of cumulative errors, the estimate will encounter problems after a while and will shift. If it is possible to send an image from the UAV to the user, over time, a correction to the shift created can be applied to the UAV using the image so that the cumulative errors become 0 and the work can be resumed.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
           <li>Real‑time image stabilization and online mosaicking for aerial imagery.</li>
           <li>Computer vision applications: face recognition; vehicle speed estimation from video.</li>
           <li>MAVLink integrations; gimbal and camera stream control; RTSP pipelines.</li>
@@ -183,6 +219,16 @@ body{
           <li>Celestial‑ and LTE‑based navigation experiments for redundancy.</li>
           <li>Web/UI and networking components for ground control and data services.</li>
         </ul>
+
+        <!-- <ul class="list">
+          <li>Autonomous UAV navigation: vision‑based and road‑based methods; INS integration with EKF; Visual Teach & Repeat.</li>
+          <li>Real‑time image stabilization and online mosaicking for aerial imagery.</li>
+          <li>Computer vision applications: face recognition; vehicle speed estimation from video.</li>
+          <li>MAVLink integrations; gimbal and camera stream control; RTSP pipelines.</li>
+          <li>Embedded computing on NVIDIA Jetson and Raspberry Pi for onboard perception.</li>
+          <li>Celestial‑ and LTE‑based navigation experiments for redundancy.</li>
+          <li>Web/UI and networking components for ground control and data services.</li>
+        </ul> -->
 
         <div class="hr"></div>
 
