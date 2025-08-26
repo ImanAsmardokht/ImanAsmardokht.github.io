@@ -216,7 +216,14 @@ body{
           <li>
             <span style="font-weight: bold; font-size: 18px; color: #3498db;">Image Correction</span>
             <ul>
-              <li><b>Image Stabilization:</b>
+              <li><b>Camera Calibration</b>
+                <ul>
+                  <li>Calibrating optical cameras using chessboard, Circles Pattern, and ChArUco board</li>
+                  <li>Estimating camera matrix and lens distortion coefficients</li>
+                  <li>Undistorting images for real-time projects using distortion coefficients and camera matrices</li>
+                </ul>
+              </li>
+              <li><b>Video Stabilization:</b>
                 <ul>
                   <li>Stabilizing the camera attached to the UAV using Roll, Pitch, and Yaw UAV</li>
                   <li>The camera is very sensitive to the image rate sent and the data rate related to the IMU using only IMU information. Image Processing techniques are used to compensate for this sensitivity and reduce it.</li>
@@ -226,13 +233,6 @@ body{
                 <ul>
                   <li>Positioning consecutive frames relative to each other and integrating them into a black two-dimensional environment and displaying the main stream in real-time in its actual location</li>
                   <li>Geo-referencing mosaicked images and displaying them on the map for real-time map updates using UAV coordinates, UAV angles, and camera gimbal angles</li>
-                </ul>
-              </li>
-              <li><b>Camera Calibration</b>
-                <ul>
-                  <li>Calibrating optical cameras using chessboard, Circles Pattern, and ChArUco board</li>
-                  <li>Estimating camera matrix and lens distortion coefficients</li>
-                  <li>Undistorting images for real-time projects using distortion coefficients and camera matrices</li>
                 </ul>
               </li>
             </ul>
