@@ -177,7 +177,7 @@ body{
 
         <ul class="list">
           <li>
-            <span style="font-weight: bold; font-size: 18px;">Autonomous UAV Navigation:</span>
+            <span style="font-weight: bold; font-size: 18px; color: #3498db;">Autonomous UAV Navigation:</span>
             <ul>
               <li><b>Vision Base Navigation:</b>
                 <ul>
@@ -214,7 +214,7 @@ body{
           </li>
 
           <li>
-            <span style="font-weight: bold; font-size: 18px;">Image Correction</span>
+            <span style="font-weight: bold; font-size: 18px; color: #3498db;">Image Correction</span>
             <ul>
               <li><b>Image Stabilization:</b>
                 <ul>
@@ -224,21 +224,40 @@ body{
               </li>
               <li><b>Online Mosaicking</b>
                 <ul>
-                  <li>Road Detection and Tracking</li>
-                  <li>Road Following for Navigation</li>
-                  <li>By using road detection and tracking, the road is kept  in the center of the live stream by applying corrections to the UAV, and this keeps the UAV always moving on the road and automatic navigation is performed.</li>
+                  <li>Positioning consecutive frames relative to each other and integrating them into a black two-dimensional environment and displaying the main stream in real-time in its actual location</li>
+                  <li>Geo-referencing mosaicked images and displaying them on the map for real-time map updates using UAV coordinates, UAV angles, and camera gimbal angles</li>
+                </ul>
+              </li>
+              <li><b>Camera Calibration</b>
+                <ul>
+                  <li>Calibrating optical cameras using chessboard, Circles Pattern, and ChArUco board</li>
+                  <li>Estimating camera matrix and lens distortion coefficients</li>
+                  <li>Undistorting images for real-time projects using distortion coefficients and camera matrices</li>
                 </ul>
               </li>
             </ul>
           </li>
 
-          <li>Real‑time image stabilization and online mosaicking for aerial imagery.</li>
-          <li>Computer vision applications: face recognition; vehicle speed estimation from video.</li>
-          <li>MAVLink integrations; gimbal and camera stream control; RTSP pipelines.</li>
-          <li>Embedded computing on NVIDIA Jetson and Raspberry Pi for onboard perception.</li>
-          <li>Celestial‑ and LTE‑based navigation experiments for redundancy.</li>
-          <li>Web/UI and networking components for ground control and data services.</li>
-        </ul>
+          <li>
+            <span style="font-weight: bold; font-size: 18px; color: #3498db;">Applied Recognition Using AI</span>
+            <ul>
+              <li><b>vehicles Detection</b>
+                <ul>
+                  <li>vehicles detection using YOLO and training it with datasets with appropriate altitude for UAV detection</li>
+                  <li>High-accuracy vehicles speed estimation using image perspective resolution and a fixed length on the ground</li>
+                  <li>Lane detection of each passing vehicle and detection of vehicles driving in prohibited lanes</li>
+                  <li>Estimating the distance between vehicles and detecting vehicles that are a short distance apart relative to their speed</li>
+                </ul>
+              </li>
+              <li><b>Face Recognition</b>
+                <ul>
+                  <li>Facial recognition using a small number of photos of a person</li>
+                  <li>Software design to detect a person's permission to enter an environment that displays different streams from different cameras</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
 
         <!-- <ul class="list">
           <li>Autonomous UAV navigation: vision‑based and road‑based methods; INS integration with EKF; Visual Teach & Repeat.</li>
