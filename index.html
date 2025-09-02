@@ -110,10 +110,10 @@ body{
         <div class="role">M.Sc. Photogrammetry • R&D • Computer Vision • UAV Navigation</div>
         <div class="tags">
           <span class="tag">Python</span>
-          <span class="tag">CUDA</span>
-          <span class="tag">C#</span>
           <span class="tag">Computer Vision</span>
           <span class="tag">UAV / MAVLink</span>
+          <span class="tag">CUDA</span>
+          <span class="tag">C#</span>
           <span class="tag">Embedded (Jetson • Raspberry Pi)</span>
           <span class="tag">GIS / Mapping</span>
         </div>
@@ -129,23 +129,46 @@ body{
     <section class="grid" aria-label="content">
       <aside class="card">
         <h3 class="h">Profile</h3>
-        <div class="item">
+        <div class="item" style="text-align: justify;">
           R&D engineer and photogrammetry specialist with experience in computer vision, UAV autonomous navigation, and real‑time image processing. Comfortable across embedded platforms, mapping workflows, and full‑stack integration for mission planning and data products.
         </div>
         <div class="hr"></div>
         <h3 class="h">Skills</h3>
         <div class="badges">
           <span class="badge">Python</span>
-          <span class="badge">CUDA</span>
+          <div class="sub-badges"  style = "margin-left: 25px;" >
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">cv2</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">scikit-learn</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">scikit-image</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">pymavlink</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">socket / websockets</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">PySide6 / Qt / QML</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">tensorflow</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">keras</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">pytorch</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">torchvision</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">ultralytics (YOLO)</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">CUDA</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">pymilvus</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">flask</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">json</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">Kivy</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">pillow (PIL)</span>
+            <span class="badge" style="display: inline-flex; flex-wrap: wrap; gap: 6px; margin-top: 2px;">threading</span>
+          </div>
+
           <span class="badge">C#</span>
-          <span class="badge">HTML/CSS/JavaScript</span>
+          <span class="badge">HTML / CSS / JavaScript</span>
           <span class="badge">Linux</span>
+          <span class="badge">Autopilot</span>
           <span class="badge">Mission Planner</span>
           <span class="badge">Agisoft Metashape</span>
           <span class="badge">GeoServer</span>
           <span class="badge">ArcGIS / QGIS</span>
           <span class="badge">RTSP</span>
-          <span class="badge">Gimbal/Camera Control</span>
+          <span class="badge">Gimbal / Camera Control</span>
+          <span class="badge">AutoCAD</span>
+          <span class="badge">Civil3D</span>
         </div>
         <div class="hr"></div>
         <h3 class="h">Languages</h3>
@@ -183,31 +206,31 @@ body{
                 <ul>
                   <li>Terrain based navigation using aerial imagery</li>
                   <li>Using Google Satellite imagery for Library</li>
-                  <li>By finding similarities between the live stream image and Google satellite images or georeferenced orthomosaics of the area in which the UAV is flying, it is positioned and its automatic navigation is performed.</li>
+                  <li style="text-align: justify;">By finding similarities between the live stream image and Google satellite images or georeferenced orthomosaics of the area in which the UAV is flying, it is positioned and its automatic navigation is performed.</li>
                 </ul>
               </li>
               <li><b>Road Base Navigation:</b>
                 <ul>
                   <li>Road Detection and Tracking</li>
                   <li>Road Following for Navigation</li>
-                  <li>By using road detection and tracking, the road is kept  in the center of the live stream by applying corrections to the UAV, and this keeps the UAV always moving on the road and automatic navigation is performed.</li>
+                  <li style="text-align: justify;">By using road detection and tracking, the road is kept  in the center of the live stream by applying corrections to the UAV, and this keeps the UAV always moving on the road and automatic navigation is performed.</li>
                 </ul>
               </li>
               <li><b>Visual Teach & Repeat:</b>
                 <ul>
-                  <li>Teaching phase: Using GPS and INS, features are identified along the route, and their coordinates are given and stored.</li>
-                  <li>Repeating phase: On the return route, the UAV position is determined and navigation is performed by finding similarities between the stored features that were given coordinates and the live camera stream.</li>
-                  <li>A route is taken using GPS/INS and as soon as GPS is lost, it automatically returns from the route taken.</li>
+                  <li style="text-align: justify;">Teaching phase: Using GPS and INS, features are identified along the route, and their coordinates are given and stored.</li>
+                  <li style="text-align: justify;">Repeating phase: On the return route, the UAV position is determined and navigation is performed by finding similarities between the stored features that were given coordinates and the live camera stream.</li>
+                  <li style="text-align: justify;">A route is taken using GPS/INS and as soon as GPS is lost, it automatically returns from the route taken.</li>
                 </ul>
               </li>
               <li><b>LTE Navigation:</b>
                 <ul>
-                  <li>Receiving signals from the contact towers, the signal includes an ID specific to each tower, signal strength, and tower type, which allows the module's distance from each tower to be calculated, and once the exact location of the towers is known, the UAV is positioned and automatic navigation is performed.</li>
+                  <li style="text-align: justify;">Receiving signals from the contact towers, the signal includes an ID specific to each tower, signal strength, and tower type, which allows the module's distance from each tower to be calculated, and once the exact location of the towers is known, the UAV is positioned and automatic navigation is performed.</li>
                 </ul>
               </li>
               <li><b>INS Navigation and Manual Correction:</b>
                 <ul>
-                  <li>If the UAV does not have any positioning module, using its internal elements such as air speed, IMU, Barometer, Compass, which are EKF inputs, the UAV can have an estimate of its position and use it to navigate, but in this method, due to the presence of cumulative errors, the estimate will encounter problems after a while and will shift. If it is possible to send an image from the UAV to the user, over time, a correction to the shift created can be applied to the UAV using the image so that the cumulative errors become 0 and the work can be resumed.</li>
+                  <li style="text-align: justify;">If the UAV does not have any positioning module, using its internal elements such as air speed, IMU, Barometer, Compass, which are EKF inputs, the UAV can have an estimate of its position and use it to navigate, but in this method, due to the presence of cumulative errors, the estimate will encounter problems after a while and will shift. If it is possible to send an image from the UAV to the user, over time, a correction to the shift created can be applied to the UAV using the image so that the cumulative errors become 0 and the work can be resumed.</li>
                 </ul>
               </li>
             </ul>
@@ -218,21 +241,21 @@ body{
             <ul>
               <li><b>Camera Calibration</b>
                 <ul>
-                  <li>Calibrating optical cameras using chessboard, Circles Pattern, and ChArUco board</li>
-                  <li>Estimating camera matrix and lens distortion coefficients</li>
-                  <li>Undistorting images for real-time projects using distortion coefficients and camera matrices</li>
+                  <li style="text-align: justify;">Calibrating optical cameras using chessboard, Circles Pattern, and ChArUco board</li>
+                  <li style="text-align: justify;">Estimating camera matrix and lens distortion coefficients</li>
+                  <li style="text-align: justify;">Undistorting images for real-time projects using distortion coefficients and camera matrices</li>
                 </ul>
               </li>
               <li><b>Video Stabilization:</b>
                 <ul>
-                  <li>Stabilizing the camera attached to the UAV using Roll, Pitch, and Yaw UAV</li>
-                  <li>The camera is very sensitive to the image rate sent and the data rate related to the IMU using only IMU information. Image Processing techniques are used to compensate for this sensitivity and reduce it.</li>
+                  <li style="text-align: justify;">Stabilizing the camera attached to the UAV using Roll, Pitch, and Yaw UAV</li>
+                  <li style="text-align: justify;">The camera is very sensitive to the image rate sent and the data rate related to the IMU using only IMU information. Image Processing techniques are used to compensate for this sensitivity and reduce it.</li>
                 </ul>
               </li>
               <li><b>Online Mosaicking</b>
                 <ul>
-                  <li>Positioning consecutive frames relative to each other and integrating them into a black two-dimensional environment and displaying the main stream in real-time in its actual location</li>
-                  <li>Geo-referencing mosaicked images and displaying them on the map for real-time map updates using UAV coordinates, UAV angles, and camera gimbal angles</li>
+                  <li style="text-align: justify;">Positioning consecutive frames relative to each other and integrating them into a black two-dimensional environment and displaying the main stream in real-time in its actual location</li>
+                  <li style="text-align: justify;">Geo-referencing mosaicked images and displaying them on the map for real-time map updates using UAV coordinates, UAV angles, and camera gimbal angles</li>
                 </ul>
               </li>
             </ul>
@@ -243,16 +266,16 @@ body{
             <ul>
               <li><b>vehicles Detection</b>
                 <ul>
-                  <li>vehicles detection using YOLO and training it with datasets with appropriate altitude for UAV detection</li>
-                  <li>High-accuracy vehicles speed estimation using image perspective resolution and a fixed length on the ground</li>
-                  <li>Lane detection of each passing vehicle and detection of vehicles driving in prohibited lanes</li>
-                  <li>Estimating the distance between vehicles and detecting vehicles that are a short distance apart relative to their speed</li>
+                  <li style="text-align: justify;">vehicles detection using YOLO and training it with datasets with appropriate altitude for UAV detection</li>
+                  <li style="text-align: justify;">High-accuracy vehicles speed estimation using image perspective resolution and a fixed length on the ground</li>
+                  <li style="text-align: justify;">Lane detection of each passing vehicle and detection of vehicles driving in prohibited lanes</li>
+                  <li style="text-align: justify;">Estimating the distance between vehicles and detecting vehicles that are a short distance apart relative to their speed</li>
                 </ul>
               </li>
               <li><b>Face Recognition</b>
                 <ul>
-                  <li>Facial recognition using a small number of photos of a person</li>
-                  <li>Software design to detect a person's permission to enter an environment that displays different streams from different cameras</li>
+                  <li style="text-align: justify;">Facial recognition using a small number of photos of a person</li>
+                  <li style="text-align: justify;">Software design to detect a person's permission to enter an environment that displays different streams from different cameras</li>
                 </ul>
               </li>
             </ul>
@@ -274,21 +297,23 @@ body{
         <h3 class="h">Work Experience</h3>
         <div class="two-col">
           <div class="item">
-            <strong>R&D Engineer – AI Solutions</strong><br>
-            2020–Present
+            <strong>Research & Development</strong><br>
+            2024–Present
             <ul class="list">
-              <li>Developed AI and image‑processing pipelines for UAV autonomy and mapping.</li>
-              <li>Implemented ML/CV modules for navigation, detection, and real‑time streaming.</li>
-              <li>Deployed solutions on Jetson and Raspberry Pi; integrated with Mission Planner.</li>
+              <li style="text-align: justify;">Computer vision programmer and real-time processing of UAV aerial images</li>
+              <li style="text-align: justify;">Design and programming for automated UAV navigation</li>
+              <li style="text-align: justify;">Giving different commands to the autopilot to perform various tasks using the Raspberry Pi and Jetson boards</li>
+              <li style="text-align: justify;">Creating various packets and exchanging information on the network using ground and air links to command the gimbal and camera</li>
+              <li style="text-align: justify;">Detect and track objects using deep learning networks and AI solutions</li>
             </ul>
           </div>
           <div class="item">
             <strong>Surveying & Photogrammetry Engineer</strong><br>
-            2018–Present
+            2018–2023
             <ul class="list">
-              <li>UAV‑based photogrammetric surveys; LiDAR/imagery to 3D products.</li>
-              <li>Leica Total Station and GPS workflows; spatial analysis in ArcGIS/QGIS.</li>
-              <li>Orthomosaics, DSM/DTM generation, and quality control in Metashape.</li>
+              <li>Aerial mapping with drones and production of 3D urban models and orthomosaic of areas for map production</li>
+              <li>DEM generation using drone before and after mining to calculate extraction volume</li>
+              <li>Accurate mapping, design and drawing using GPS, Laica and leveling</li>
             </ul>
           </div>
         </div>
