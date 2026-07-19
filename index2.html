@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Iman Asmardokht — R&D Engineer · Computer Vision · UAV Navigation</title>
+<meta name="description" content="Iman Asmardokht — M.Sc. Photogrammetry. R&D engineer specializing in computer vision, autonomous UAV navigation, and real-time aerial image processing.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f6;
+  --paper:#ffffff;
+  --ink:#1a2230;
+  --ink-soft:#41506a;
+  --muted:#6b7890;
+  --line:#e6eaf1;
+  --line-soft:#eef1f6;
+  --brand:#2563eb;
+  --brand-2:#0ea5a4;
+  --brand-ink:#1d4ed8;
+  --chip:#f2f6ff;
+  --chip-ink:#274690;
+  --accent-soft:#eff6ff;
+  --shadow:0 24px 60px -20px rgba(20,35,70,.28);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:radial-gradient(1200px 700px at 15% -10%, #e7edfb, transparent 60%),
+             radial-gradient(1000px 700px at 110% 0%, #e6f6f4, transparent 55%),
+             var(--bg);
+  color:var(--ink);
+  font-family:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:15px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding:36px 18px;
+}
+h1,h2,h3,.name{font-family:"Sora","Inter",sans-serif}
+
+/* ---------- Sheet (A4-like) ---------- */
+.sheet{
+  max-width:900px;margin:0 auto;
+  background:var(--paper);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+/* ---------- Header ---------- */
+.header{
+  position:relative;
+  padding:34px 40px 30px;
+  color:#fff;
+  background:
+    radial-gradient(700px 260px at 90% -40%, rgba(255,255,255,.20), transparent 60%),
+    linear-gradient(120deg,#1e3a8a 0%,#2563eb 48%,#0ea5a4 120%);
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:24px;
+  align-items:center;
+}
+.avatar{
+  width:112px;height:112px;border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,.85);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  background:#dfe7f5;
+}
+.name{font-size:33px;font-weight:800;letter-spacing:.2px;line-height:1.1;margin:0}
+.role{margin-top:8px;font-size:15px;font-weight:500;color:#e4ecff;letter-spacing:.2px}
+.contact{
+  margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px
+}
+.contact a,.contact span{color:#eaf1ff;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
+.contact a:hover{color:#fff;text-decoration:underline}
+.ic{width:15px;height:15px;flex:none;opacity:.9}
+
+/* ---------- Body layout ---------- */
+.body{
+  display:grid;
+  grid-template-columns:290px 1fr;
+}
+.side{
+  padding:28px 26px;
+  background:linear-gradient(180deg,#f8fafd, #f4f7fc);
+  border-right:1px solid var(--line);
+}
+.main{padding:28px 34px}
+
+/* ---------- Section titles ---------- */
+.sec{margin:0 0 12px}
+.sec:not(:first-child){margin-top:24px}
+.sec-title{
+  display:flex;align-items:center;gap:10px;
+  font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--brand-ink);margin:0 0 14px;
+}
+.sec-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.main .sec-title{color:var(--brand-ink)}
+
+/* ---------- Profile ---------- */
+.profile{color:var(--ink-soft);font-size:13.5px;text-align:justify}
+.dual{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}
+.dual span{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);
+  color:#fff;padding:5px 11px;border-radius:99px;font-size:12px;font-weight:600;letter-spacing:.02em;
+}
+.dual span svg{width:14px;height:14px}
+
+/* ---------- Highlights ---------- */
+.highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.hl{background:linear-gradient(180deg,#f7faff,#eef4ff);border:1px solid #dce7fb;border-radius:12px;padding:12px 12px;text-align:center}
+.hl b{display:block;font-family:"Sora",sans-serif;font-size:19px;font-weight:800;color:var(--brand-ink);line-height:1.1}
+.hl span{display:block;font-size:11px;color:var(--muted);margin-top:4px;line-height:1.35}
+@media (max-width:760px){.highlights{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Skills ---------- */
+.skill-group{margin-bottom:14px}
+.skill-group:last-child{margin-bottom:0}
+.skill-label{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;letter-spacing:.02em}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  background:var(--chip);color:var(--chip-ink);
+  border:1px solid #dbe6ff;
+  padding:4px 9px;border-radius:7px;font-size:11.5px;font-weight:500;
+}
+.chip.alt{background:#f1fbf9;color:#0b6e6b;border-color:#cdeeeb}
+
+/* ---------- Bars (languages) ---------- */
+.lang{margin-bottom:12px}
+.lang:last-child{margin-bottom:0}
+.lang-top{display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px}
+.lang-top b{font-weight:600}
+.lang-top span{color:var(--muted)}
+.bar{height:6px;border-radius:99px;background:#e5ebf5;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+
+/* ---------- Info list (side) ---------- */
+.info{font-size:13px}
+.info div{margin-bottom:9px}
+.info div:last-child{margin-bottom:0}
+.info b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700;margin-bottom:1px}
+
+/* ---------- Education / timeline ---------- */
+.entry{position:relative;padding-left:22px;margin-bottom:18px}
+.entry:last-child{margin-bottom:0}
+.entry::before{content:"";position:absolute;left:0;top:6px;width:11px;height:11px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--brand)}
+.entry::after{content:"";position:absolute;left:5px;top:20px;bottom:-14px;width:2px;background:var(--line)}
+.entry:last-child::after{display:none}
+.entry-title{font-weight:700;font-size:15px;color:var(--ink)}
+.entry-sub{color:var(--brand-ink);font-weight:600;font-size:13px;margin-top:2px}
+.entry-meta{color:var(--muted);font-size:12.5px;margin-top:2px}
+.entry ul{margin:8px 0 0;padding-left:17px}
+.entry ul li{margin:4px 0;font-size:13px;color:var(--ink-soft);text-align:justify}
+
+/* ---------- Projects ---------- */
+.proj{margin-bottom:18px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;
+  background:linear-gradient(180deg,#fbfdff,#f7faff)}
+.proj:last-child{margin-bottom:0}
+.proj-head{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.proj-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:none}
+.proj-title{font-weight:700;font-size:15.5px;color:var(--brand-ink);font-family:"Sora",sans-serif}
+.proj-sub{font-weight:700;font-size:13px;color:var(--ink);margin:10px 0 3px}
+.proj ul{margin:3px 0 0;padding-left:17px}
+.proj ul li{margin:3px 0;font-size:12.8px;color:var(--ink-soft);text-align:justify}
+.thesis{padding:14px 16px;border-left:3px solid var(--brand);background:var(--accent-soft);
+  border-radius:0 12px 12px 0;font-size:13.5px;color:var(--ink-soft)}
+.thesis b{color:var(--ink)}
+
+/* ---------- Print / PDF (A4) ---------- */
+@page{size:A4;margin:12mm}
+@media print{
+  body{background:#fff;padding:0;font-size:11.5px}
+  .sheet{max-width:none;box-shadow:none;border:none;border-radius:0}
+  .header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .proj,.side,.chip,.chip.alt,.thesis,.bar>i,.header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .proj{break-inside:avoid}
+  .entry{break-inside:avoid}
+  .sec-title{break-after:avoid}
+  a{color:inherit;text-decoration:none}
+}
+@media (max-width:760px){
+  .header{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .contact{justify-content:center}
+  .body{grid-template-columns:1fr}
+  .side{border-right:none;border-bottom:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <img class="avatar" src="Photo.jpg" alt="Iman Asmardokht">
+      <div>
+        <h1 class="name">Iman Asmardokht</h1>
+        <div class="role">Research Scientist &amp; R&amp;D Engineer · GPS-Denied UAV Navigation · Vision-Based Autonomy</div>
+        <div class="dual">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v6.5L4.5 19a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L14 9.5V3"/></svg>Research Scientist</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>Software Developer</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg>Problem Solver</span>
+        </div>
+        <div class="contact">
+          <a href="mailto:iasmardokht@gmail.com">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            iasmardokht@gmail.com</a>
+          <a href="tel:+989362023173">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.4-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.8 2Z"/></svg>
+            +98 936 202 3173</a>
+          <span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Tehran, Iran</span>
+          <a href="https://www.linkedin.com/in/iman-asmardokht" target="_blank" rel="noopener">
+            <svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+            LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+      <!-- ================= SIDEBAR ================= -->
+      <aside class="side">
+        <section class="sec">
+          <h2 class="sec-title">Profile</h2>
+          <p class="profile">Research scientist and software developer working at the intersection of <b>computer vision</b> and <b>autonomous UAV navigation</b>. I formulate the underlying estimation and matching problems rigorously, then ship them as robust, real-time systems that fly. My core focus is enabling drones to localize and navigate <b>without GPS</b> — using vision, terrain, and sensor fusion — and turning research ideas into practical, field-tested solutions.</p>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Core Skills</h2>
+
+          <div class="skill-group">
+            <div class="skill-label">Navigation &amp; State Estimation</div>
+            <div class="chips">
+              <span class="chip alt">GPS-Denied Localization</span>
+              <span class="chip alt">Visual Odometry / VO</span>
+              <span class="chip alt">Visual Place Recognition</span>
+              <span class="chip alt">EKF / Kalman Filtering</span>
+              <span class="chip alt">Sensor Fusion (IMU/INS)</span>
+              <span class="chip alt">Image Registration</span>
+              <span class="chip alt">Georeferencing</span>
+              <span class="chip alt">Epipolar / Homography</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Deep Learning &amp; Computer Vision</div>
+            <div class="chips">
+              <span class="chip">PyTorch</span>
+              <span class="chip">TensorFlow / Keras</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">YOLO (v8/v11)</span>
+              <span class="chip">Semantic Segmentation</span>
+              <span class="chip">Vision Transformers</span>
+              <span class="chip">SuperPoint · SuperGlue</span>
+              <span class="chip">LightGlue · LoFTR</span>
+              <span class="chip">SIFT / ORB / AKAZE</span>
+              <span class="chip">Vector Search (Milvus)</span>
+              <span class="chip">scikit-learn / -image</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Edge Deployment &amp; Real-Time</div>
+            <div class="chips">
+              <span class="chip">CUDA</span>
+              <span class="chip">TensorRT</span>
+              <span class="chip">ONNX Runtime</span>
+              <span class="chip">Jetson (Orin / Nano)</span>
+              <span class="chip">GStreamer / RTSP</span>
+              <span class="chip">Multiprocessing / async</span>
+              <span class="chip">Docker</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Languages &amp; Tooling</div>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">C++</span>
+              <span class="chip">C#</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Git</span>
+              <span class="chip">Bash</span>
+              <span class="chip">NumPy / SciPy</span>
+              <span class="chip">HTML / CSS / JS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">UAV Autonomy &amp; Robotics</div>
+            <div class="chips">
+              <span class="chip alt">MAVLink / pymavlink</span>
+              <span class="chip alt">ArduPilot / PX4</span>
+              <span class="chip alt">SITL Simulation</span>
+              <span class="chip alt">Mission Planner</span>
+              <span class="chip alt">Gimbal / Camera Control</span>
+              <span class="chip alt">Companion Computers</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Software &amp; Geospatial</div>
+            <div class="chips">
+              <span class="chip">PySide6 / Qt</span>
+              <span class="chip">Flask · websockets</span>
+              <span class="chip">Agisoft Metashape</span>
+              <span class="chip">GeoServer</span>
+              <span class="chip">ArcGIS / QGIS</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Languages</h2>
+          <div class="lang">
+            <div class="lang-top"><b>Persian</b><span>Native</span></div>
+            <div class="bar"><i style="width:100%"></i></div>
+          </div>
+          <div class="lang">
+            <div class="lang-top"><b>English</b><span>Intermediate</span></div>
+            <div class="bar"><i style="width:60%"></i></div>
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Details</h2>
+          <div class="info">
+            <div><b>Location</b>Tehran, Iran</div>
+            <div><b>Focus</b>GPS-Denied Vision-Based Autonomy</div>
+
+          </div>
+        </section>
+      </aside>
+
+      <!-- ================= MAIN ================= -->
+      <main class="main">
+        <section class="sec">
+          <h2 class="sec-title">Key Strengths</h2>
+          <div class="highlights">
+            <div class="hl"><b>6+</b><span>GPS-denied navigation methods designed &amp; built</span></div>
+            <div class="hl"><b>Real-Time</b><span>On-drone CV pipelines on embedded hardware</span></div>
+            <div class="hl"><b>Research → Field</b><span>From problem formulation to deployed system</span></div>
+            <div class="hl"><b>Full-Stack</b><span>Perception, estimation, autopilot &amp; UI</span></div>
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Education</h2>
+          <div class="entry">
+            <div class="entry-title">M.Sc. in Photogrammetry</div>
+            <div class="entry-sub">University of Tehran</div>
+            <div class="entry-meta">2023 – 2026 (expected)</div>
+          </div>
+          <div class="entry">
+            <div class="entry-title">B.Sc. in Surveying Engineering</div>
+            <div class="entry-sub">University of Tehran</div>
+            <div class="entry-meta">2018 – 2023</div>
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">M.Sc. Thesis</h2>
+          <div class="thesis">
+            <b>Vision- and road-based navigation for UAVs in GPS-denied environments.</b>
+            Formulating drone localization as an image-matching and pose-estimation problem: the live camera stream is matched against georeferenced aerial references (satellite imagery / orthomosaics) and road structure to recover position and heading — delivering autonomous navigation when GNSS is unavailable, jammed, or spoofed.
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Work Experience</h2>
+          <div class="entry">
+            <div class="entry-title">Research &amp; Development Engineer</div>
+            <div class="entry-sub">Miad Andishesaz R&amp;D Company</div>
+            <div class="entry-meta">2024 – Present</div>
+            <ul>
+              <li>Own the full path from research to product: formulate the navigation/perception problem, prototype the algorithm, then deploy it as a real-time on-drone system.</li>
+              <li>Design and implement GPS-denied autonomous navigation (vision-based localization, map-matching, sensor fusion).</li>
+              <li>Deploy real-time CV pipelines on NVIDIA Jetson and Raspberry Pi companion computers, commanding the autopilot via MAVLink.</li>
+              <li>Engineer custom packet protocols over ground/air datalinks for gimbal, camera, and payload control.</li>
+              <li>Build and train deep-learning models for detection, tracking, and matching, optimized for edge inference.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-title">Surveying &amp; Photogrammetry Engineer</div>
+            <div class="entry-sub">Freelance / Field Projects</div>
+            <div class="entry-meta">2018 – 2023</div>
+            <ul>
+              <li>Drone aerial mapping, 3D urban modeling, and orthomosaic production for map generation.</li>
+              <li>DEM generation before/after mining to compute extracted material volumes.</li>
+              <li>Precise mapping, design and drafting using GPS, Leica total station, and leveling.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sec">
+          <h2 class="sec-title">Research &amp; Key Projects</h2>
+
+          <!-- Project 1 -->
+          <div class="proj">
+            <div class="proj-head"><span class="proj-dot"></span><span class="proj-title">GPS-Denied Autonomous UAV Navigation</span></div>
+            <p style="font-size:12.8px;color:var(--ink-soft);margin:0 0 4px;text-align:justify"><b>Problem:</b> keep a UAV localized and autonomous when GNSS is lost, jammed, or spoofed. I designed and implemented a family of complementary navigation methods, each solving a different operational scenario.</p>
+            <div class="proj-sub">Absolute Visual Localization (map-matching)</div>
+            <ul>
+              <li>Recover absolute position by matching the live downward camera stream to a georeferenced reference map (satellite tiles / orthomosaics) via feature matching and homography estimation — robust to scale, rotation, and seasonal appearance change.</li>
+            </ul>
+            <div class="proj-sub">Road-Based Navigation</div>
+            <ul>
+              <li>Real-time road detection &amp; tracking that keeps the road centered in the frame and closes the loop onto the autopilot, so the UAV follows road networks autonomously with no GPS fix.</li>
+            </ul>
+            <div class="proj-sub">Visual Teach &amp; Repeat</div>
+            <ul>
+              <li>Teach pass builds a geo-tagged feature map along the route; on the repeat pass the UAV re-localizes against it and automatically retraces the path the instant GPS drops — a practical fail-safe for return-to-home.</li>
+            </ul>
+            <div class="proj-sub">LTE Signal-Based Positioning</div>
+            <ul>
+              <li>Trilateration from cellular tower signatures (ID, RSSI, type) against a known tower database — a vision-independent fallback for low-visibility conditions.</li>
+            </ul>
+            <div class="proj-sub">INS Dead-Reckoning + Vision Drift Correction</div>
+            <ul>
+              <li>EKF fuses airspeed, IMU, barometer, and compass for short-term position estimation; unbounded INS drift is periodically reset using visual map-matching from downlinked imagery — combining the strengths of both estimators.</li>
+            </ul>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="proj">
+            <div class="proj-head"><span class="proj-dot"></span><span class="proj-title">Real-Time Aerial Image Processing</span></div>
+            <p style="font-size:12.8px;color:var(--ink-soft);margin:0 0 4px;text-align:justify"><b>Problem:</b> raw UAV video is distorted, shaky, and unmapped — the geometric backbone every downstream navigation and mapping task depends on.</p>
+            <div class="proj-sub">Camera Calibration &amp; Undistortion</div>
+            <ul>
+              <li>Intrinsic calibration (chessboard, circles-grid, ChArUco); estimation of camera matrix and distortion coefficients, with real-time undistortion feeding the live pipeline.</li>
+            </ul>
+            <div class="proj-sub">Video Stabilization</div>
+            <ul>
+              <li>Attitude-aware stabilization fusing gimbal roll/pitch/yaw with IMU data, plus image-processing compensation for IMU/frame-rate jitter — clean video for both operators and matching algorithms.</li>
+            </ul>
+            <div class="proj-sub">Online Mosaicking &amp; Live Georeferencing</div>
+            <ul>
+              <li>Real-time frame-to-frame registration into a unified canvas, georeferenced from UAV pose and gimbal angles to update the map live during flight.</li>
+            </ul>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="proj">
+            <div class="proj-head"><span class="proj-dot"></span><span class="proj-title">Applied Deep Learning &amp; Recognition</span></div>
+            <div class="proj-sub">Aerial Traffic Analytics</div>
+            <ul>
+              <li>Vehicle detection with YOLO, trained on custom UAV-altitude datasets for reliable top-down detection.</li>
+              <li>High-accuracy speed estimation from perspective-corrected ground resolution and a known reference length.</li>
+              <li>Per-vehicle lane assignment, prohibited-lane violation detection, and unsafe following-distance flagging relative to speed.</li>
+            </ul>
+            <div class="proj-sub">Few-Shot Face Recognition &amp; Access Control</div>
+            <ul>
+              <li>Embedding-based face recognition from only a few reference images; access-control software managing entry permissions across multiple simultaneous camera streams.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
